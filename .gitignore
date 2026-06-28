@@ -1,0 +1,15 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Editors
+.idea/
+*.swp
+.vscode/*
+!.vscode/extensions.json
+
+# Local Claude Code state (never commit installed-plugin caches)
+.claude/cache/
+
+# Logs / scratch
+*.log

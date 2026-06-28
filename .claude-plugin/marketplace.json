@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
+  "name": "labault",
+  "version": "0.1.0",
+  "description": "Labault's Claude Code marketplace — opinionated PHP/Symfony plugins built from real production workflows, not generated filler.",
+  "owner": {
+    "name": "Thibault (Labault)",
+    "url": "https://github.com/Labault"
+  },
+  "plugins": [
+    {
+      "name": "symfony-forge",
+      "description": "Scaffold and harden Symfony projects the Labault way: strict quality baseline (PHPStan level 9, Rector, PHP-CS-Fixer), pre-commit hooks, and a Symfony-aware code reviewer.",
+      "source": "./plugins/symfony-forge",
+      "category": "development",
+      "version": "0.1.0"
+    }
+  ]
+}

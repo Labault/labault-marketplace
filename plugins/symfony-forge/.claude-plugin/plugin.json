@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin.json",
+  "name": "symfony-forge",
+  "version": "0.1.0",
+  "description": "Scaffold and harden Symfony projects the Labault way: strict quality baseline (PHPStan level 9, Rector, PHP-CS-Fixer), pre-commit hooks, and a Symfony-aware code reviewer.",
+  "author": {
+    "name": "Thibault (Labault)",
+    "url": "https://github.com/Labault"
+  },
+  "homepage": "https://labault.dev",
+  "repository": "https://github.com/Labault/labault-marketplace",
+  "license": "MIT",
+  "keywords": ["symfony", "php", "frankenphp", "phpstan", "rector", "code-quality"]
+}
