@@ -26,7 +26,7 @@ agent is available to the `Task` tool as `symfony-reviewer`.
 
 ## How they fit together
 
-```
+```text
 symfony new my-app
    │
    ├─ symfony-bootstrap  →  bootstrap apply   (baseline + hooks + CI)

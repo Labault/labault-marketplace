@@ -47,7 +47,7 @@ code or pad the review with praise.
 
 ## Output format
 
-```
+```text
 ## Review summary
 <2-3 sentences: is this ship-ready, and the single most important issue>
 
