@@ -52,9 +52,9 @@ Everything an installed plugin adds is namespaced under the plugin name
 
 Three real moments, so you can picture it rather than infer it from a feature list:
 
-**Setting up a fresh project**
+### Setting up a fresh project
 
-```
+```text
 You      ▸ Just ran `symfony new`. Set this project up like my others.
 Claude   ▸ Recognizes a bootstrap task. Runs `bootstrap apply --dry-run`, picks the
            symfony profile from composer.json, and previews the baseline it will add:
@@ -62,18 +62,18 @@ Claude   ▸ Recognizes a bootstrap task. Runs `bootstrap apply --dry-run`, pick
          ▸ Applies it, runs `make qa`, reports the gate is green. Done.
 ```
 
-**Checking whether you can commit**
+### Checking whether you can commit
 
-```
+```text
 You      ▸ /symfony-forge:quality-gate
 Claude   ▸ Runs PHPStan + PHP-CS-Fixer + Rector. "Green except one PHPStan error in
            OrderService.php:42 — a nullable repository result used without a guard.
            Fix that and you're good."
 ```
 
-**A real review before the PR**
+### A real review before the PR
 
-```
+```text
 You      ▸ Feature's done, review it before I open the PR.
 Claude   ▸ (symfony-reviewer) Flags an N+1 in the loop, a missing CSRF check on the
            delete action, and an unhandled empty-cart case. Skips the type hints —
