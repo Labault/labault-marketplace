@@ -21,9 +21,11 @@ Then:
 2. For each failure, give: the file and line, what rule it breaks, and the
    concrete fix — or note that `make fix` / `php-cs-fixer fix` will auto-resolve
    it.
-3. PHPStan runs at level 9 with a baseline. Do **not** suggest lowering the level
-   or adding to the baseline to make it pass — fix the new code. Only mention the
-   baseline if a failure is genuinely pre-existing legacy.
+3. PHPStan's default is level 9 without an automatic baseline. Do not lower the
+   level, add broad ignores or generate/refresh a baseline to pass. An existing
+   legacy baseline must be an explicitly approved, documented project exception
+   with a removal plan. Report approved suppressions and distinguish code errors
+   from missing tools or environment failures. Never modify other projects.
 
 Keep it tight: the developer wants to know "can I commit?" and, if not, exactly
 what to touch.

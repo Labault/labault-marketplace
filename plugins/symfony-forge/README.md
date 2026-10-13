@@ -30,7 +30,7 @@ agent is available to the `Task` tool as `symfony-reviewer`.
 symfony new my-app
    │
    ├─ symfony-bootstrap  →  bootstrap apply   (baseline + hooks + CI)
-   │                        make qa           (gate is green on day one)
+   │                        make qa           (verify the actual result)
    │
    ├─ …build the feature…
    │
@@ -39,6 +39,17 @@ symfony new my-app
 ```
 
 ## Requirements
+
+PHPStan runs at level 9 without an automatic baseline. A temporary legacy
+baseline requires the project owner's explicit approval, documented debt and a
+removal plan. The skill and `/quality-gate` never create or regenerate it
+implicitly. An update may expose diagnostics previously hidden by the old
+template include; review `bootstrap reconcile --dry-run` before adoption.
+
+Read the current `docs/phpstan-policy.md` in the bootstrap checkout for the
+canonical policy. Use a bootstrap revision implementing it; older revisions
+generated baselines automatically. Installing this plugin does not update the
+CLI or reconcile applications.
 
 The skill drives the [`bootstrap`](https://github.com/Labault/bootstrap-web-setup)
 CLI, which **writes config only — it never installs binaries**. The tools it
